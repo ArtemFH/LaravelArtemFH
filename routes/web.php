@@ -20,16 +20,6 @@ Route::name('results.')->group(function () {
     Route::get('/benchmarks/{indexResult}', [\App\Http\Controllers\BenchmarkController::class, 'indexResult']);
 });
 
-//Route::name('results.')->group(function () {
-//    Route::get('/CPU', [\App\Http\Controllers\BenchmarkController::class, 'indexCpu'])->name('CPU');
-//
-//    Route::get('/GPU', [\App\Http\Controllers\BenchmarkController::class, 'indexGpu'])->name('GPU');
-//
-//    Route::get('/RAM', [\App\Http\Controllers\BenchmarkController::class, 'indexRam'])->name('RAM');
-//
-//    Route::get('/benchmarks/{indexResult}', [\App\Http\Controllers\BenchmarkController::class, 'indexResult']);
-//});
-
 Route::name('moderator.')->group(function () {
     Route::get('/moderator-panel', [])->name('panel');
 });

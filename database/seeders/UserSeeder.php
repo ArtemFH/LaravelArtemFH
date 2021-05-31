@@ -39,18 +39,6 @@ class UserSeeder extends Seeder
                 'email' => 'den4ik@mail.ru',
                 'role_id' => '1',
                 'like_nomination_id' => '30',
-            ], [
-                'username' => 'Vor',
-                'password' => '$2y$12$sDMLTH4SPGUP88qTXV20zOVJbVVPvKy03jEs8FcJWe2QXYFIG2MA2',
-                'email' => 'vor@mail.ru',
-                'role_id' => '1',
-                'like_nomination_id' => '20',
-            ], [
-                'username' => 'Nigger',
-                'password' => '$2y$12$sDMLTH4SPGUP88qTXV20zOVJbVVPvKy03jEs8FcJWe2QXYFIG2MA2',
-                'email' => 'nigger@mail.ru',
-                'role_id' => '1',
-                'like_nomination_id' => '10',
             ]
         ];
         DB::table('users')->insert($users);

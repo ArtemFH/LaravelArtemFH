@@ -17,1015 +17,1015 @@ class BenchmarkSeeder extends Seeder
         $benchmarks = [
             [
                 'image' => 'benchmarks/test.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '10',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '20',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',
                 'approved' => '1'
             ], [
                 'image' => 'benchmarks/' . rand(1, 4) . '.jpg',
-                'score' => rand(2000, 50000),
+                'score' => rand(2000, 100000),
                 'user_id' => rand(1, 5),
                 'nomination_id' => '30',
                 'created_at' => '2021-04-06 02:09:19',

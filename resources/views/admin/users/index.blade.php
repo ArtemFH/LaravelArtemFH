@@ -1,6 +1,6 @@
 @section('body')
     <div class="container mt-4">
-        {{--        {{dd($users)}}--}}
+        {{dd($users)}}
         @foreach($users as $user)
             <div class="card mb-3">
                 {{--                                {{ dd($user->role) }}--}}

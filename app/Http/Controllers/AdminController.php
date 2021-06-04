@@ -29,6 +29,5 @@ class AdminController extends Controller
 
     public function setModerator($index)
     {
-
     }
 }

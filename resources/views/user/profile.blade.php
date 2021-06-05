@@ -5,9 +5,9 @@
 @endsection
 @section('body')
     @auth
-        @foreach($awards->awards_id as $name)
-            <div>{{\App\Models\Award::find($name)->name}}</div>
-        @endforeach
+{{--        @foreach($awards->awards_id as $name)--}}
+{{--            <div>{{\App\Models\Award::find($name)->name}}</div>--}}
+{{--        @endforeach--}}
         @if($hardware == !null)
             {{--            <ul class="p-3 w-50 list-group">--}}
             {{--                <li class="list-group-item">Любимая номинация: {{ $hardware->user->like_nomination->name }}</li>--}}
@@ -20,9 +20,9 @@
                 <li class="list-group-item">Storage: {{ $hardware->storage }}</li>
                 <li class="list-group-item">Motherboard: {{ $hardware->motherboard }}</li>
                 @if($hardware->approved == 0)
-                    <li class="list-group-item">Статус: В рассмотрений</li>
+                    <li class="list-group-item active">Статус: В рассмотрений</li>
                 @else
-                    <li class="list-group-item active">Статус: Подтверждено</li>
+                    <li class="list-group-item" style="background: #dcbd4361">Статус: Подтверждено</li>
                 @endif
             </ul>
             <a class="nav-link" href="{{ route('user.requestBenchmark') }}">

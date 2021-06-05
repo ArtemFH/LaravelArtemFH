@@ -8,6 +8,10 @@ Route::name('home.')->group(function () {
 
 Route::name('admin.')->group(function () {
     Route::get('/admin-panel', [\App\Http\Controllers\AdminController::class, 'index', '__construct'])->name('panel');
+
+    Route::get('/admin-panel/updateUser/{id}', [\App\Http\Controllers\AdminController::class, 'setUser'])->name('update_user');
+
+    Route::get('/admin-panel/updateModerator/{id}', [\App\Http\Controllers\AdminController::class, 'setModerator'])->name('update_moderator');
 });
 
 Route::name('results.')->group(function () {

@@ -21,17 +21,18 @@
                 <li class="list-group-item">The user did not leave a request or is not authentic</li>
             </ul>
         @endif
-        <div class="container">
-            {{--            <div class="row pb-4">--}}
+        <div class="container d-flex">
             @if($indexUserGet->approved == 0)
                 <div class="col">
                     <div class="list-group mt-3">
-                        <a href="{{ route('results.CPU') }}" class="headNomination list-group-item list-group-item-action flex-column align-items-start">
+                        <a href="{{ route('results.CPU') }}"
+                           class="headNomination list-group-item list-group-item-action flex-column align-items-start">
                             <p class="mb-1">Nomination: CPU</p>
                         </a>
-                        @foreach($results as $result)
+                        @foreach($resultsCPU as $result)
                             @if($result->nomination_id == 10)
-                                <a href="{{ url('benchmarks/'.$result->id) }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <a href="{{ url('benchmarks/'.$result->id) }}"
+                                   class="list-group-item list-group-item-action flex-column align-items-start">
                                     <p class="mb-1">Score: {{ $result->score }}</p>
                                     <div>
                                         <small class="sm">Enthusiast:
@@ -45,12 +46,14 @@
                 </div>
                 <div class="col">
                     <div class="list-group mt-3">
-                        <a href="{{ route('results.CPU') }}" class="headNomination list-group-item list-group-item-action flex-column align-items-start">
+                        <a href="{{ route('results.GPU') }}"
+                           class="headNomination list-group-item list-group-item-action flex-column align-items-start">
                             <p class="mb-1">Nomination: GPU</p>
                         </a>
-                        @foreach($results as $result)
+                        @foreach($resultsGPU as $result)
                             @if($result->nomination_id == 20)
-                                <a href="{{ url('benchmarks/'.$result->id) }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <a href="{{ url('benchmarks/'.$result->id) }}"
+                                   class="list-group-item list-group-item-action flex-column align-items-start">
                                     <p class="mb-1">Score: {{ $result->score }}</p>
                                     <div>
                                         <small class="sm">Enthusiast:
@@ -64,12 +67,14 @@
                 </div>
                 <div class="col">
                     <div class="list-group mt-3 pb-2">
-                        <a href="{{ route('results.CPU') }}" class="headNomination list-group-item list-group-item-action flex-column align-items-start">
+                        <a href="{{ route('results.RAM') }}"
+                           class="headNomination list-group-item list-group-item-action flex-column align-items-start">
                             <p class="mb-1">Nomination: RAM</p>
                         </a>
-                        @foreach($results as $result)
+                        @foreach($resultsRAM as $result)
                             @if($result->nomination_id == 30)
-                                <a href="{{ url('benchmarks/'.$result->id) }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <a href="{{ url('benchmarks/'.$result->id) }}"
+                                   class="list-group-item list-group-item-action flex-column align-items-start">
                                     <p class="mb-1">Score: {{ $result->score }}</p>
                                     <div>
                                         <small class="sm">Enthusiast:
@@ -82,7 +87,6 @@
                     </div>
                 </div>
             @endif
-            {{--            </div>--}}
         </div>
     @endauth
     @guest()

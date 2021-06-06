@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             NominationSeeder::class,
             AwardSeeder::class,
             AdminSeeder::class,
+            ModeratorSeeder::class,
             UserSeeder::class,
             HardwareSeeder::class,
             BenchmarkSeeder::class

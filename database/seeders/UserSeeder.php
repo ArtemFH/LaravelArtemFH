@@ -16,12 +16,6 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
-                'username' => 'Voice',
-                'password' => '$2y$12$sDMLTH4SPGUP88qTXV20zOVJbVVPvKy03jEs8FcJWe2QXYFIG2MA2',
-                'email' => 'voice@mail.ru',
-                'role_id' => '1',
-                'like_nomination_id' => '20',
-            ], [
                 'username' => 'Noroff',
                 'password' => '$2y$12$sDMLTH4SPGUP88qTXV20zOVJbVVPvKy03jEs8FcJWe2QXYFIG2MA2',
                 'email' => 'norof@gmail.com',

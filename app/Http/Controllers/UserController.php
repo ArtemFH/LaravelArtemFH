@@ -104,15 +104,16 @@ class UserController extends Controller
         $indexUserGet = User::where('username', $indexUser)->first();
 
         if ($indexUserGet) {
-
-            $results = Benchmark::query()->where('user_id', $indexUserGet->id)->orderBy('score', 'DESC')->get();
+            $resultsCPU = Benchmark::query()->where('user_id', $indexUserGet->id)->where('nomination_id', 10)->limit(5)->orderBy('score', 'DESC')->get();
+            $resultsGPU = Benchmark::query()->where('user_id', $indexUserGet->id)->where('nomination_id', 20)->limit(5)->orderBy('score', 'DESC')->get();
+            $resultsRAM = Benchmark::query()->where('user_id', $indexUserGet->id)->where('nomination_id', 30)->limit(5)->orderBy('score', 'DESC')->get();
 
             $hardware = Hardware::where('user_id', $indexUserGet->id)->first();
 
             $data = array(
                 'title' => $indexUserGet->username
             );
-            return view('user.profileView', compact('indexUserGet', 'hardware', 'results'))->with($data);
+            return view('user.profileView', compact('indexUserGet', 'hardware', 'resultsCPU', 'resultsGPU', 'resultsRAM'))->with($data);
         }
 
         return view('errors.404');

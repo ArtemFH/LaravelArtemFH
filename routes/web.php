@@ -14,6 +14,10 @@ Route::name('admin.')->group(function () {
     Route::get('/admin-panel/updateModerator/{id}', [\App\Http\Controllers\AdminController::class, 'setModerator'])->name('update_moderator');
 });
 
+Route::name('moderator.')->group(function () {
+    Route::get('/moderator-panel', [\App\Http\Controllers\ModeratorController::class, 'index', '__construct'])->name('panel');
+});
+
 Route::name('results.')->group(function () {
     Route::get('/CPU', [\App\Http\Controllers\BenchmarkController::class, 'indexCpu'])->name('CPU');
 
@@ -22,10 +26,6 @@ Route::name('results.')->group(function () {
     Route::get('/RAM', [\App\Http\Controllers\BenchmarkController::class, 'indexRam'])->name('RAM');
 
     Route::get('/benchmarks/{indexResult}', [\App\Http\Controllers\BenchmarkController::class, 'indexResult']);
-});
-
-Route::name('moderator.')->group(function () {
-    Route::get('/moderator-panel', [])->name('panel');
 });
 
 Route::name('user.')->group(function () {

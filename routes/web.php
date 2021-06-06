@@ -16,6 +16,8 @@ Route::name('admin.')->group(function () {
 
 Route::name('moderator.')->group(function () {
     Route::get('/moderator-panel', [\App\Http\Controllers\ModeratorController::class, 'index', '__construct'])->name('panel');
+
+    Route::get('/moderator-panel/{id}', [\App\Http\Controllers\ModeratorController::class, 'getResult'])->name('get_result');
 });
 
 Route::name('results.')->group(function () {

@@ -23,4 +23,14 @@ class ModeratorController extends Controller
 
         return view('admin.moderator-panel', compact('dontApproved'))->with($data);
     }
+
+    public function getResult($id)
+    {
+        $data = array(
+            'title' => 'Moderator Panel'
+        );
+
+        $getBenchmark = Benchmark::where('id', $id)->first();
+        return view('admin.benchmarks.indexView', compact('getBenchmark'))->with($data);
+    }
 }

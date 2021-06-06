@@ -80,7 +80,61 @@ sm {
 
 .card-image {
     display: flex;
-    padding: 0px;
+    padding: 0;
+}
+
+footer {
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    height: 56px;
+    background-color: #DDC35D;
+    border-top: 1px #342E27 solid;
+    width: 100%;
+}
+
+footer div {
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+}
+
+footer div p {
+    margin: 0;
+}
+
+.container {
+    padding-bottom: 50px;
+}
+
+.page-item .page-link {
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    background: #fff6dd;
+    color: #86213D;
+}
+
+.active .page-link {
+    background-color: #DDC35D !important;
+    color: #86213D !important;
+}
+
+.disabled .page-link {
+    background-color: #DDC35D !important;
+    color: #86213D !important;
+}
+
+.page-item .next:hover {
+    transition: transform .3s;
+    transform: scale(1.05);
+}
+
+.page-item .next {
+    z-index: 10;
+    transition: transform .3s;
+    transform: scale(1);
 }
 
 /*#342E27*/

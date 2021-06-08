@@ -8,6 +8,7 @@ use App\Models\User;
 use Hamcrest\Arrays\IsArrayWithSize;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -17,8 +18,8 @@ class UserController extends Controller
             'username' => 'required',
             'email' => 'required|email',
             'password' => 'required',
-            'confirm_password' => 'required',
-            'awards_id' => 'required'
+            'avatar' => 'required|file',
+            'confirm_password' => 'required'
         ]);
 
         if (User::where('username', $validateFields['username'])->exists()) {
@@ -39,7 +40,8 @@ class UserController extends Controller
             ]);
         }
 
-        $user = User::create($validateFields);
+        $filename = Storage::disk('public')->put('user', $request->avatar);
+        $user = User::create($request->only('username', 'email', 'password') + ['avatar' => $filename]);
 
         if ($user) {
             Auth::login($user);

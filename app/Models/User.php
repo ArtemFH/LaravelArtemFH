@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\URL;
 
 class User extends Authenticatable
 {
@@ -24,7 +25,8 @@ class User extends Authenticatable
         'password',
         'avatar',
         'role_id',
-        'awards_id'
+        'awards_id',
+        'image'
     ];
 
     public function setPasswordAttribute($password)
@@ -45,6 +47,11 @@ class User extends Authenticatable
     public function like_nomination()
     {
         return $this->belongsTo(Nomination::class);
+    }
+
+    public function getImageAttribute()
+    {
+        return URL::to('/') . '/storage/' . $this->attributes['image'];
     }
 
     public function hardware()

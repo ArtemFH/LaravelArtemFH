@@ -20,6 +20,7 @@ class CreateBenchmarksTable extends Migration
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('nomination_id')->constrained('nominations')->onDelete('cascade');
             $table->boolean('approved')->default(0);
+            $table->boolean('reject')->default(0);
             $table->timestamps();
         });
     }

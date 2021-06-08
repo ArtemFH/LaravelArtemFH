@@ -17,6 +17,14 @@
                     </ul>
                 </div>
             </div>
+
+            <button type="button" class="btn btn-success"
+                    onclick="window.location='{{ route("moderator.approved_result", ['id' => $getBenchmark->id]) }}'">
+                Approved Result{{$getBenchmark->id}}</button>
+
+            <button type="button" class="btn btn-danger"
+                    onclick="window.location='{{ route("moderator.reject_result", ['id' => $getBenchmark->id]) }}'">
+                Reject Result{{$getBenchmark->id}}</button>
             {{--                <div class="col-6">--}}
             {{--                    @if($user->role->name == 'user')--}}
             {{--                        <button type="button" class="btn btn-success"--}}

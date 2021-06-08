@@ -106,4 +106,16 @@ class RequestHardwareController extends Controller
 
         return redirect(route('user.profile'));
     }
+
+    public function understandBenchmark()
+    {
+        Benchmark::where('user_id', Auth::id())->where('approved', false)->where('reject', true)->delete();
+        return redirect()->back();
+    }
+
+    public function understandHardware()
+    {
+        Hardware::where('user_id', Auth::id())->where('approved', false)->where('reject', true)->delete();
+        return redirect()->back();
+    }
 }

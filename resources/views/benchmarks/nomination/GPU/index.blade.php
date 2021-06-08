@@ -4,7 +4,7 @@
             <div class="row pb-4">
                 <div class="col">
                     <div class="list-group mt-3">
-                        <a href="" class="headNomination list-group-item list-group-item-action flex-column align-items-start">
+                        <a href="" class="headNomination list-group-item-text list-group-item list-group-item-action flex-column align-items-start">
                             <p class="mb-1">Nomination: GPU</p>
                         </a>
                         @foreach($benchmarkGPUs as $indexGPU)

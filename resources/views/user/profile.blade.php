@@ -5,13 +5,7 @@
 @endsection
 @section('body')
     @auth
-{{--        @foreach($awards->awards_id as $name)--}}
-{{--            <div>{{\App\Models\Award::find($name)->name}}</div>--}}
-{{--        @endforeach--}}
         @if($hardware == !null)
-            {{--            <ul class="p-3 w-50 list-group">--}}
-            {{--                <li class="list-group-item">Любимая номинация: {{ $hardware->user->like_nomination->name }}</li>--}}
-            {{--            </ul>--}}
             <ul class="p-3 w-50 list-group">
                 <li class="list-group-item">CPU: {{ $hardware->CPU }}</li>
                 <li class="list-group-item">GPU: {{ $hardware->GPU }}</li>
@@ -19,25 +13,33 @@
                 <li class="list-group-item">PSU: {{ $hardware->PSU }}</li>
                 <li class="list-group-item">Storage: {{ $hardware->storage }}</li>
                 <li class="list-group-item">Motherboard: {{ $hardware->motherboard }}</li>
-                @if($hardware->approved == 0)
-                    <li class="list-group-item active">Статус: В рассмотрений</li>
+                @if($hardware->approved == 0 and $hardware->reject == 0)
+                    <li class="list-group-item active">Status: Under consideration</li>
+                @elseif($hardware->approved == 1 and $hardware->reject == 0)
+                    <li class="list-group-item" style="background: #dcbd4361">Status: Confirmed</li>
                 @else
-                    <li class="list-group-item" style="background: #dcbd4361">Статус: Подтверждено</li>
+                    <li class="list-group-item active">Status: Rejected</li>
                 @endif
             </ul>
-            <a class="nav-link" href="{{ route('user.requestBenchmark') }}">
-                <button class="m-3 btn btn-success">Submit benchmark result</button>
-            </a>
-            <a class="nav-link" href="{{ route('user.updateHardware') }}">
-                <button class="m-3 btn btn-success">Update hardware</button>
-            </a>
-            <a class="nav-link" href="{{ route('user.deleteHardware') }}">
-                <button class="m-3 btn btn-danger">Delete hardware</button>
-            </a>
+            @if(!\App\Models\Benchmark::where('user_id', \Illuminate\Support\Facades\Auth::id())->where('approved', false)->where('reject', true)->first())
+                @if(!\App\Models\Hardware::where('user_id', \Illuminate\Support\Facades\Auth::id())->where('approved', false)->get()->first())
+                    <button type="button" class="btn btn-success" onclick="window.location='{{ route('user.requestBenchmark') }}'">Submit benchmark result</button>
+                @endif
+            @else
+                <h3>Your application for results was rejected
+                    <button type="button" class="btn btn-success" onclick="window.location='{{ route('user.understandBenchmark') }}'">I understand</button>
+                </h3>
+            @endif
+            @if(!\App\Models\Hardware::where('user_id', \Illuminate\Support\Facades\Auth::id())->where('approved', false)->where('reject', true)->first())
+                <button type="button" class="btn btn-success" onclick="window.location='{{ route('user.updateHardware') }}'">Update hardware</button>
+            @else
+                <h3>Your application for hardware was rejected
+                    <button type="button" class="btn btn-success" onclick="window.location='{{ route('user.understandHardware') }}'">I understand</button>
+                </h3>
+            @endif
+            <button type="button" class="btn btn-danger" onclick="window.location='{{ route('user.deleteHardware') }}'">Delete hardware</button>
         @else
-            <a class="nav-link" href="{{ route('user.requestHardware') }}">
-                <button class="m-3 btn btn-success">Fill in hardware</button>
-            </a>
+            <button type="button" class="btn btn-success" onclick="window.location='{{ route('user.requestHardware') }}'">Fill in hardware</button>
         @endif
     @endauth
 @endsection

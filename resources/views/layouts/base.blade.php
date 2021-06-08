@@ -20,10 +20,13 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
             <ul class="navbar-nav">
+
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ route('home.head') }}">Home</a>
                 </li>
+
                 @auth()
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ route('user.profile') }}">{{ auth()->user()->username }}</a>
@@ -42,11 +45,13 @@
                         </li>
                     @endcan
                 @endauth
+
                 @guest()
                     <a class="nav-link" href="{{ route('user.login') }}">Sign in</a>
                     <a class="nav-link" href="{{ route('user.registration') }}">Sign up</a>
                 @endguest
             </ul>
+
         </div>
     </nav>
 @show

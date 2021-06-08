@@ -14,13 +14,13 @@
                 <div class="col-6">
                     @if($user->role->name == 'user')
                         <button type="button" class="btn btn-success"
-                                onclick="window.location='{{ route("admin.update_moderator", ['id' => $user->id]) }}'">
+                                onclick="window.location='{{ route('admin.update_moderator', ['id' => $user->id]) }}'">
                             Make a moderator
                         </button>
                     @endif
                     @if($user->role->name == 'moderator')
                         <button type="button" class="btn btn-success"
-                                onclick="window.location='{{ route("admin.update_user", ['id' => $user->id]) }}'">
+                                onclick="window.location='{{ route('admin.update_user', ['id' => $user->id]) }}'">
                             Make a user
                         </button>
                     @endif

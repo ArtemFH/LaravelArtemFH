@@ -23,6 +23,7 @@ class CreateHardwaresTable extends Migration
             $table->string('motherboard');
             $table->foreignId('user_id')->unique()->constrained('users')->onDelete('cascade');
             $table->boolean('approved')->default(0);
+            $table->boolean('reject')->default(0);
         });
     }
 

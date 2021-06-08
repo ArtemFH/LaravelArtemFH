@@ -17,7 +17,11 @@ Route::name('admin.')->group(function () {
 Route::name('moderator.')->group(function () {
     Route::get('/moderator-panel', [\App\Http\Controllers\ModeratorController::class, 'index', '__construct'])->name('panel');
 
-    Route::get('/moderator-panel/{id}', [\App\Http\Controllers\ModeratorController::class, 'getResult'])->name('get_result');
+    Route::get('/moderator-panel/{id}', [\App\Http\Controllers\ModeratorController::class, 'getResult', '__construct'])->name('get_result');
+
+    Route::get('/moderator-panel/approvedResult/{id}', [\App\Http\Controllers\ModeratorController::class, 'approvedResult', '__construct'])->name('approved_result');
+
+    Route::get('/moderator-panel/rejectResult/{id}', [\App\Http\Controllers\ModeratorController::class, 'rejectResult', '__construct'])->name('reject_result');
 });
 
 Route::name('results.')->group(function () {
@@ -45,6 +49,9 @@ Route::name('user.')->group(function () {
 
     Route::get('/user/{indexUser}', [\App\Http\Controllers\UserController::class, 'profileUser'])->middleware('auth')->name('profileView');
 
+    Route::get('/understandBenchmark', [\App\Http\Controllers\RequestHardwareController::class, 'understandBenchmark'])->name('understandBenchmark');
+
+    Route::get('/understandHardware', [\App\Http\Controllers\RequestHardwareController::class, 'understandHardware'])->name('understandHardware');
 
     Route::post('/requestBenchmark', [\App\Http\Controllers\RequestHardwareController::class, 'requestBenchmark']);
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Benchmark;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ModeratorController extends Controller
 {
@@ -19,8 +20,7 @@ class ModeratorController extends Controller
             'title' => 'Moderator Panel'
         );
 
-        $dontApproved = Benchmark::where('approved', false)->paginate(3);
-
+        $dontApproved = Benchmark::where('approved', false)->where('reject', false)->paginate(3);
         return view('admin.moderator-panel', compact('dontApproved'))->with($data);
     }
 
@@ -32,5 +32,23 @@ class ModeratorController extends Controller
 
         $getBenchmark = Benchmark::where('id', $id)->first();
         return view('admin.benchmarks.indexView', compact('getBenchmark'))->with($data);
+    }
+
+    public function approvedResult($id)
+    {
+        $object = Benchmark::where('id', $id)->first();
+        $object->approved = true;
+        $object->save();
+
+        return redirect(route('moderator.panel'));
+    }
+
+    public function rejectResult($id)
+    {
+        $object = Benchmark::where('id', $id)->first();
+        $object->reject = true;
+        $object->save();
+
+        return redirect(route('moderator.panel'));
     }
 }

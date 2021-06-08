@@ -7,7 +7,6 @@ body {
 
 nav {
     background-color: #DDC35D;
-    border-bottom: 1px #342E27 solid;
 }
 
 .list-group {
@@ -25,6 +24,8 @@ nav {
 
 .headNomination {
     background-color: #DDC35D;
+    text-decoration: none !important;
+    text-align: center;
 }
 
 form {
@@ -89,7 +90,6 @@ footer {
     bottom: 0;
     height: 56px;
     background-color: #DDC35D;
-    border-top: 1px #342E27 solid;
     width: 100%;
 }
 

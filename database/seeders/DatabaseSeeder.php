@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,7 +19,7 @@ class DatabaseSeeder extends Seeder
             NominationSeeder::class,
             AwardSeeder::class,
             AdminSeeder::class,
-            UserFakerSeeder::class,
+            UserSeeder::class,
             ModeratorSeeder::class,
             HardwareSeeder::class,
             BenchmarkSeeder::class

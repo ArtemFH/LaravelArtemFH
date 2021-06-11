@@ -1,0 +1,41 @@
+@media (max-width: 991px) {
+    nav {
+        background-color: #4F8088;
+        padding: 0.5rem 1rem !important;
+    }
+
+    .padding-top {
+        padding: 70px 20px !important;
+    }
+
+    .navbar-nav {
+        padding-left: 0;
+    }
+
+    .block-result-right .block-none {
+        display: none;
+    }
+
+    .block-result .col-4, .col-8 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .single-container {
+        transition: padding .5s;
+        padding: 0 30px;
+    }
+
+    .contains {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 374px) {
+    .block-result .block-result-left {
+        padding-right: 5px !important;
+        padding-left: 5px !important;
+    }
+}

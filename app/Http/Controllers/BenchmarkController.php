@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Benchmark;
+use App\Models\Hardware;
 use App\Models\Nomination;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -15,9 +17,35 @@ class BenchmarkController extends Controller
             'title' => 'Homе'
         );
 
-        $benchmarkCPUs = Benchmark::query()->where('nomination_id', '10')->where('approved', 1)->orderBy('score', 'DESC')->limit(5)->get();
-        $benchmarkGPUs = Benchmark::query()->where('nomination_id', '20')->where('approved', 1)->orderBy('score', 'DESC')->limit(5)->get();
-        $benchmarkRAMs = Benchmark::query()->where('nomination_id', '30')->where('approved', 1)->orderBy('score', 'DESC')->limit(5)->get();
+        $benchmarkCPUs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+            ->where('benchmarks.approved', '=', true)
+            ->where('benchmarks.reject', '=', false)
+            ->where('benchmarks.nomination_id', '10')
+            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->limit(5)
+            ->get();
+
+        $benchmarkGPUs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+            ->where('benchmarks.approved', '=', true)
+            ->where('benchmarks.reject', '=', false)
+            ->where('benchmarks.nomination_id', '20')
+            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->limit(5)
+            ->get();
+
+        $benchmarkRAMs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+            ->where('benchmarks.approved', '=', true)
+            ->where('benchmarks.reject', '=', false)
+            ->where('benchmarks.nomination_id', '30')
+            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->limit(5)
+            ->get();
 
         return view('home', compact('benchmarkCPUs', 'benchmarkGPUs', 'benchmarkRAMs'))->with($data);
     }
@@ -30,7 +58,15 @@ class BenchmarkController extends Controller
             'urlRoute' => 'results.'
         );
 
-        $benchmarkCPUs = Benchmark::query()->where('nomination_id', '10')->where('approved', 1)->orderBy('score', 'DESC')->limit(100)->get();
+        $benchmarkCPUs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+            ->where('benchmarks.approved', '=', true)
+            ->where('benchmarks.reject', '=', false)
+            ->where('benchmarks.nomination_id', '10')
+            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->limit(100)
+            ->get();
 
         return view('benchmarks.nomination.results', compact('benchmarkCPUs'))->with($data);
     }
@@ -43,7 +79,15 @@ class BenchmarkController extends Controller
             'urlRoute' => 'results.GPU.'
         );
 
-        $benchmarkGPUs = Benchmark::query()->where('nomination_id', '20')->where('approved', 1)->orderBy('score', 'DESC')->limit(100)->get();
+        $benchmarkGPUs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+            ->where('benchmarks.approved', '=', true)
+            ->where('benchmarks.reject', '=', false)
+            ->where('benchmarks.nomination_id', '20')
+            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->limit(100)
+            ->get();
 
         return view('benchmarks.nomination.results', compact('benchmarkGPUs'))->with($data);
     }
@@ -56,7 +100,15 @@ class BenchmarkController extends Controller
             'urlRoute' => 'results.'
         );
 
-        $benchmarkRAMs = Benchmark::query()->where('nomination_id', '30')->where('approved', 1)->orderBy('score', 'DESC')->limit(100)->get();
+        $benchmarkRAMs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+            ->where('benchmarks.approved', '=', true)
+            ->where('benchmarks.reject', '=', false)
+            ->where('benchmarks.nomination_id', '30')
+            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->limit(100)
+            ->get();
 
         return view('benchmarks.nomination.results', compact('benchmarkRAMs'))->with($data);
     }

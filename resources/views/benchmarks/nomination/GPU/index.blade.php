@@ -8,36 +8,32 @@
                             <p class="mb-1">Nomination: GPU</p>
                         </a>
                         @foreach($benchmarkGPUs as $indexGPU)
-                            @if($indexGPU->user->hardware->first() != null)
-                                @if($indexGPU->user->hardware->first()->approved == true)
-                                    <a href="{{ url('benchmarks/'.$indexGPU->id) }}" class="list-group-item list-group-item-action flex-column align-items-start">
-                                        <div class="block-result row">
-                                            <div class="col-4 block-result-left">
-                                                <div class="d-flex w-100 justify-content-between">
-                                                    <h5 class="mb-1">Place: {{ $loop->iteration }}</h5>
+                            <a href="{{ url('benchmarks/'.$indexGPU->id) }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="block-result row">
+                                    <div class="col-4 block-result-left">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Place: {{ $loop->iteration }}</h5>
+                                        </div>
+                                        <p class="mb-1">Score: {{ $indexGPU->score }}</p>
+                                        <div>
+                                            <small>Enthusiast:
+                                                <span class="enthusiast">{{ $indexGPU->username }}</span>
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-8 block-result-right">
+                                        <div>
+                                            <div class="block-none">
+                                                <img class="svg-result" src="{{url("/svg/gpu.svg")}}">
+                                                <div style="padding: 10px">
+                                                    Details: {{ $indexGPU->GPU }}
                                                 </div>
-                                                <p class="mb-1">Score: {{ $indexGPU->score }}</p>
-                                                <div>
-                                                    <small>Enthusiast:
-                                                        <span class="enthusiast">{{ $indexGPU->user->username }}</span>
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="col-8 block-result-right">
-                                                <div>
-                                                    <div class="block-none">
-                                                        <img class="svg-result" src="{{url("/svg/gpu.svg")}}">
-                                                        <div style="padding: 10px">
-                                                            Details: {{ $indexGPU->user->hardware->first()->GPU }}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <img src="{{ $indexGPU->user->avatar }}" alt="post-image" class="card-image">
                                             </div>
                                         </div>
-                                    </a>
-                                @endif
-                            @endif
+                                        <img src="{{ $indexGPU->avatar }}" alt="post-image" class="card-image">
+                                    </div>
+                                </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>

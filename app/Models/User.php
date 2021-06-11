@@ -49,4 +49,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Hardware::class);
     }
+
+    public function benchmark()
+    {
+        return $this->hasMany(Benchmark::class);
+    }
 }

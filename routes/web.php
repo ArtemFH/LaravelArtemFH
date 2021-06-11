@@ -9,19 +9,47 @@ Route::name('home.')->group(function () {
 Route::name('admin.')->group(function () {
     Route::get('/admin-panel', [\App\Http\Controllers\AdminController::class, 'index', '__construct'])->name('panel');
 
-    Route::get('/admin-panel/updateUser/{id}', [\App\Http\Controllers\AdminController::class, 'setUser'])->name('update_user');
+    Route::get('/admin-panel/getUser', [\App\Http\Controllers\AdminController::class, 'getUsers', '__construct'])->name('panel_user');
 
-    Route::get('/admin-panel/updateModerator/{id}', [\App\Http\Controllers\AdminController::class, 'setModerator'])->name('update_moderator');
+    Route::get('/admin-panel/getUser/updateUser/{id}', [\App\Http\Controllers\AdminController::class, 'setUser', '__construct'])->name('update_user');
+
+    Route::get('/admin-panel/getUser/updateModerator/{id}', [\App\Http\Controllers\AdminController::class, 'setModerator', '__construct'])->name('update_moderator');
+
+    Route::get('/admin-panel/getHardware', [\App\Http\Controllers\AdminController::class, 'getHardware', '__construct'])->name('panel_hardware');
+
+    Route::get('/admin-panel/getHardware/{id}', [\App\Http\Controllers\AdminController::class, 'getResultHardware', '__construct'])->name('get_result_hardware');
+
+    Route::get('/admin-panel/getHardware/approvedResult/{id}', [\App\Http\Controllers\AdminController::class, 'approvedResultHardware', '__construct'])->name('approved_result_hardware');
+
+    Route::get('/admin-panel/getHardware/rejectResult/{id}', [\App\Http\Controllers\AdminController::class, 'rejectResultHardware', '__construct'])->name('reject_result_hardware');
+
+    Route::get('/admin-panel/getBenchmark', [\App\Http\Controllers\AdminController::class, 'getBenchmarks', '__construct'])->name('panel_benchmark');
+
+    Route::get('/admin-panel/getBenchmark/{id}', [\App\Http\Controllers\AdminController::class, 'getResultBenchmark', '__construct'])->name('get_result_benchmark');
+
+    Route::get('/admin-panel/getBenchmark/approvedResult/{id}', [\App\Http\Controllers\AdminController::class, 'approvedResultBenchmark', '__construct'])->name('approved_result_benchmark');
+
+    Route::get('/admin-panel/getBenchmark/rejectResult/{id}', [\App\Http\Controllers\AdminController::class, 'rejectResultBenchmark', '__construct'])->name('reject_result_benchmark');
 });
 
 Route::name('moderator.')->group(function () {
     Route::get('/moderator-panel', [\App\Http\Controllers\ModeratorController::class, 'index', '__construct'])->name('panel');
 
-    Route::get('/moderator-panel/{id}', [\App\Http\Controllers\ModeratorController::class, 'getResult', '__construct'])->name('get_result');
+    Route::get('/moderator-panel/getHardware', [\App\Http\Controllers\ModeratorController::class, 'getHardware', '__construct'])->name('panel_hardware');
 
-    Route::get('/moderator-panel/approvedResult/{id}', [\App\Http\Controllers\ModeratorController::class, 'approvedResult', '__construct'])->name('approved_result');
+    Route::get('/moderator-panel/getHardware/{id}', [\App\Http\Controllers\ModeratorController::class, 'getResultHardware', '__construct'])->name('get_result_hardware');
 
-    Route::get('/moderator-panel/rejectResult/{id}', [\App\Http\Controllers\ModeratorController::class, 'rejectResult', '__construct'])->name('reject_result');
+    Route::get('/moderator-panel/getHardware/approvedResult/{id}', [\App\Http\Controllers\ModeratorController::class, 'approvedResultHardware', '__construct'])->name('approved_result_hardware');
+
+    Route::get('/moderator-panel/getHardware/rejectResult/{id}', [\App\Http\Controllers\ModeratorController::class, 'rejectResultHardware', '__construct'])->name('reject_result_hardware');
+
+    Route::get('/moderator-panel/getBenchmark', [\App\Http\Controllers\ModeratorController::class, 'getBenchmarks', '__construct'])->name('panel_benchmark');
+
+    Route::get('/moderator-panel/getBenchmark/{id}', [\App\Http\Controllers\ModeratorController::class, 'getResultBenchmark', '__construct'])->name('get_result_benchmark');
+
+    Route::get('/moderator-panel/getBenchmark/approvedResult/{id}', [\App\Http\Controllers\ModeratorController::class, 'approvedResultBenchmark', '__construct'])->name('approved_result_benchmark');
+
+    Route::get('/moderator-panel/getBenchmark/rejectResult/{id}', [\App\Http\Controllers\ModeratorController::class, 'rejectResultBenchmark', '__construct'])->name('reject_result_benchmark');
 });
 
 Route::name('results.')->group(function () {

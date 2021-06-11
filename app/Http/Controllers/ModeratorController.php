@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Benchmark;
+use App\Models\Hardware;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,15 +17,58 @@ class ModeratorController extends Controller
 
     public function index()
     {
+        return view('admin.moderator-panel');
+    }
+
+    public function getHardware()
+    {
+        $data = array(
+            'title' => 'Moderator Panel'
+        );
+
+        $dontApproved = Hardware::where('approved', false)->where('reject', false)->paginate(3);
+        return view('admin.hardware.index', compact('dontApproved'))->with($data);
+    }
+
+    public function getResultHardware($id)
+    {
+        $data = array(
+            'title' => 'Moderator Panel'
+        );
+
+        $getHardware = Hardware::where('id', $id)->first();
+        return view('admin.hardware.indexView', compact('getHardware'))->with($data);
+    }
+
+    public function approvedResultHardware($id)
+    {
+        $object = Hardware::where('id', $id)->first();
+        $object->approved = true;
+        $object->save();
+
+        return redirect(route('moderator.panel_hardware'));
+    }
+
+    public function rejectResultHardware($id)
+    {
+        $object = Hardware::where('id', $id)->first();
+        $object->reject = true;
+        $object->save();
+
+        return redirect(route('moderator.panel_hardware'));
+    }
+
+    public function getBenchmarks()
+    {
         $data = array(
             'title' => 'Moderator Panel'
         );
 
         $dontApproved = Benchmark::where('approved', false)->where('reject', false)->paginate(3);
-        return view('admin.moderator-panel', compact('dontApproved'))->with($data);
+        return view('admin.benchmarks.index', compact('dontApproved'))->with($data);
     }
 
-    public function getResult($id)
+    public function getResultBenchmark($id)
     {
         $data = array(
             'title' => 'Moderator Panel'
@@ -34,21 +78,21 @@ class ModeratorController extends Controller
         return view('admin.benchmarks.indexView', compact('getBenchmark'))->with($data);
     }
 
-    public function approvedResult($id)
+    public function approvedResultBenchmark($id)
     {
         $object = Benchmark::where('id', $id)->first();
         $object->approved = true;
         $object->save();
 
-        return redirect(route('moderator.panel'));
+        return redirect(route('moderator.panel_benchmark'));
     }
 
-    public function rejectResult($id)
+    public function rejectResultBenchmark($id)
     {
         $object = Benchmark::where('id', $id)->first();
         $object->reject = true;
         $object->save();
 
-        return redirect(route('moderator.panel'));
+        return redirect(route('moderator.panel_benchmark'));
     }
 }

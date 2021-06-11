@@ -15,9 +15,9 @@ class BenchmarkController extends Controller
             'title' => 'Homе'
         );
 
-        $benchmarkCPUs = Benchmark::query()->where('nomination_id', '10')->where('approved', 1)->orderBy('score', 'DESC')->limit(7)->get();
-        $benchmarkGPUs = Benchmark::query()->where('nomination_id', '20')->where('approved', 1)->orderBy('score', 'DESC')->limit(7)->get();
-        $benchmarkRAMs = Benchmark::query()->where('nomination_id', '30')->where('approved', 1)->orderBy('score', 'DESC')->limit(7)->get();
+        $benchmarkCPUs = Benchmark::query()->where('nomination_id', '10')->where('approved', 1)->orderBy('score', 'DESC')->limit(5)->get();
+        $benchmarkGPUs = Benchmark::query()->where('nomination_id', '20')->where('approved', 1)->orderBy('score', 'DESC')->limit(5)->get();
+        $benchmarkRAMs = Benchmark::query()->where('nomination_id', '30')->where('approved', 1)->orderBy('score', 'DESC')->limit(5)->get();
 
         return view('home', compact('benchmarkCPUs', 'benchmarkGPUs', 'benchmarkRAMs'))->with($data);
     }

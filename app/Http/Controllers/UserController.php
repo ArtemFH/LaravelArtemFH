@@ -19,7 +19,8 @@ class UserController extends Controller
             'email' => 'required|email',
             'password' => 'required',
             'avatar' => 'required|file',
-            'confirm_password' => 'required'
+            'confirm_password' => 'required',
+            'like_nomination_id' => 'required'
         ]);
 
         if (User::where('username', $validateFields['username'])->exists()) {
@@ -41,7 +42,7 @@ class UserController extends Controller
         }
 
         $filename = Storage::disk('public')->put('user', $request->avatar);
-        $user = User::create($request->only('username', 'email', 'password') + ['avatar' => $filename]);
+        $user = User::create($request->only('username', 'email', 'password', 'like_nomination_id') + ['avatar' => $filename]);
 
         if ($user) {
             Auth::login($user);
@@ -80,24 +81,8 @@ class UserController extends Controller
 
         $hardware = Hardware::where('user_id', Auth::id())->first();
 
-        $awards = User::find(Auth::id());
 
-//        $array = $awards->awards_id;
-
-        //        --- delete ---
-//        if ($key = array_search('2', $array)) {
-//            unset($array[$key]);
-//            $awards->awards_id = $array;
-//            $awards->save();
-//            unset($array);
-//        }
-
-        //        --- update ---
-//        array_push($array,'2');
-//        $awards->awards_id = $array;
-//        $awards->save();
-
-        return view('user.profile', compact('hardware', 'awards'))->with($data);
+        return view('user.profile', compact('hardware'))->with($data);
     }
 
 

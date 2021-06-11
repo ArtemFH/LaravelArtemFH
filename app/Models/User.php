@@ -15,18 +15,13 @@ class User extends Authenticatable
 
     public $timestamps = false;
 
-    protected $casts = [
-        'awards_id' => 'array'
-    ];
-
     protected $fillable = [
         'username',
         'email',
         'password',
         'avatar',
         'role_id',
-        'awards_id',
-        'image'
+        'like_nomination_id'
     ];
 
     public function setPasswordAttribute($password)
@@ -39,25 +34,19 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
 
-    public function awards()
-    {
-        return $this->belongsTo(Award::class);
-    }
 
     public function like_nomination()
     {
         return $this->belongsTo(Nomination::class);
     }
 
-    public function getImageAttribute()
+    public function getAvatarAttribute()
     {
-        return URL::to('/') . '/storage/' . $this->attributes['image'];
+        return URL::to('/') . '/storage/' . $this->attributes['avatar'];
     }
 
     public function hardware()
     {
-        return $this->belongsTo(Hardware::class);
+        return $this->hasMany(Hardware::class);
     }
-
-
 }

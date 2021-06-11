@@ -21,8 +21,7 @@ class AdminSeeder extends Seeder
                 'password' => '$2y$12$sDMLTH4SPGUP88qTXV20zOVJbVVPvKy03jEs8FcJWe2QXYFIG2MA2',
                 'email' => 'artembereza1@mail.ru',
                 'role_id' => '3',
-                'like_nomination_id' => '30',
-                'awards_id' => '[1,20]'
+                'like_nomination_id' => '30'
             ]
         ];
         DB::table('users')->insert($users);

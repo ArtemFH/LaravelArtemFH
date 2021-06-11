@@ -17,7 +17,6 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->nullable();
             $table->foreignId('role_id')->nullable()->default('1')->constrained('roles')->onDelete('cascade');
             $table->foreignId('like_nomination_id')->nullable()->constrained('nominations')->onDelete('cascade');
-            $table->json('awards_id')->nullable();
         });
     }
 

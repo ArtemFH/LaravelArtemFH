@@ -4,6 +4,7 @@
     <title>{{ $title }}: {{auth()->user()->username}}</title>
 @endsection
 @section('body')
+    {{--    <img src="{{auth()->user()->avatar}}" alt="post-image" class="card-image">--}}
     @auth
         @if($hardware == !null)
             <ul class="p-3 w-50 list-group">

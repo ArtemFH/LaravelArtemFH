@@ -8,54 +8,65 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link href="{{ asset('assets/bootstrap/css/bootstrap.css') }}" media="all" rel="stylesheet" type="text/css"/>
         <link href="{{ asset('assets/css/app.css') }}" media="all" rel="stylesheet" type="text/css"/>
+        <link href="{{ asset('assets/css/media.css') }}" media="all" rel="stylesheet" type="text/css"/>
+        <script src="{{ asset('assets/script/media.js') }}"></script>
     @show
 </head>
 <body id="bootstrap-overrides">
 @section('nav')
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        <img class="logoImg" src={{url("/images/logo.gif")}}>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar">
+        <img class="logoImg" src={{url("/images/robot-logo.png")}}>
         <h7>Silicon Power</h7>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-
             <ul class="navbar-nav">
-
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ route('home.head') }}">Home</a>
                 </li>
-
                 @auth()
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ route('user.profile') }}">{{ auth()->user()->username }}</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ route('user.logout') }}">Sign out</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('user.profile') }}">Profile</a>
                     </li>
                     @can('admin')
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.panel') }}">Admin</a>
                         </li>
                     @endcan
                     @can('moderator')
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('moderator.panel') }}">Moderator</a>
                         </li>
                     @endcan
                 @endauth
-
-                @guest()
-                    <a class="nav-link" href="{{ route('user.login') }}">Sign in</a>
-                    <a class="nav-link" href="{{ route('user.registration') }}">Sign up</a>
-                @endguest
             </ul>
-
+            @auth()
+                <div class="nav-end" id="but-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link button-navbar" href="{{ route('user.logout') }}">Sign out</a>
+                        </li>
+                    </ul>
+                </div>
+            @endauth
+            @guest()
+                <div class="nav-end" id="but-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link button-navbar" href="{{ route('user.login') }}">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link button-navbar" href="{{ route('user.registration') }}">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+            @endguest
         </div>
     </nav>
 @show
-<div class="mt">
+<div class="padding-top">
     @section('body')
     @show
     @section('CPU')
@@ -66,7 +77,7 @@
     @show
 </div>
 @section('footer')
-    <footer>
+    <footer id="footer" class="footer-scroll">
         <div>
             <p>© Copyright 2021</p>
         </div>

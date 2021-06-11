@@ -13,20 +13,16 @@
                 <div class="col-6">
                     <div class="card mb-3">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{ $indexApproved->score }}</li>
                             <li class="list-group-item">{{ $indexApproved->user->username }}</li>
-                            <li class="list-group-item">{{ $indexApproved->nomination->name }}</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-6">
-                    @can('admin')
-                        <button type="button" class="btn btn-success" onclick="window.location='{{ route("admin.get_result_benchmark", ['id' => $indexApproved->id]) }}'">Redirect to {{$indexApproved->id}}</button>
-                    @endcan
-                    @can('moderator')
-                        <button type="button" class="btn btn-success" onclick="window.location='{{ route("moderator.get_result_benchmark", ['id' => $indexApproved->id]) }}'">Redirect to {{$indexApproved->id}}</button>
-                    @endcan
-                </div>
+                @can('admin')
+                    <button type="button" class="btn btn-success" onclick="window.location='{{ route("admin.get_result_hardware", ['id' => $indexApproved->id]) }}'">Redirect to {{$indexApproved->id}}</button>
+                @endcan
+                @can('moderator')
+                    <button type="button" class="btn btn-success" onclick="window.location='{{ route("moderator.get_result_hardware", ['id' => $indexApproved->id]) }}'">Redirect to {{$indexApproved->id}}</button>
+                @endcan
             </div>
         @endforeach
         {{ $dontApproved->links('components.pagination') }}

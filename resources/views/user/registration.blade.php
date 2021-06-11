@@ -35,17 +35,20 @@
             @enderror
         </div>
         <div class="form-group">
-            <label for="avatar" class="col-form-label-lg">Example avatar input</label>
-            <input type="file" name="avatar" class="form-control-file" id="avatar">
+            <label for="exampleFormControlSelect1" class="col-form-label-lg">Like nomination</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="like_nomination_id">
+                <option value="10" selected>CPU</option>
+                <option value="20">GPU</option>
+                <option value="30">RAM</option>
+            </select>
         </div>
-        {{--        <div class="form-group">--}}
-        {{--            <fieldset>--}}
-        {{--                <label for="awards_id" class="col-form-label-lg">awards_id</label>--}}
-        {{--                <input id="awards_id" class="form-control" name="awards_id[]" type="checkbox" value="1" placeholder="awards_id">--}}
-        {{--                <input id="awards_id" class="form-control" name="awards_id[]" type="checkbox" value="2" placeholder="awards_id">--}}
-        {{--                <input id="awards_id" class="form-control" name="awards_id[]" type="checkbox" value="3" placeholder="awards_id">--}}
-        {{--            </fieldset>--}}
-        {{--        </div>--}}
+        <div class="form-group" style="display: grid">
+            <label for="c-file" class="col-form-label-lg">Avatar</label>
+            <div id="c-file" class="custom-file">
+                <input type="file" name="avatar" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Example avatar input</label>
+            </div>
+        </div>
         <div class="form-group center">
             <button class="buttonSuccess btn btn-lg btn-primary" type="submit" name="send" value="1">Registration</button>
         </div>

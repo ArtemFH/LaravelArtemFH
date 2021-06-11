@@ -1,3 +1,4 @@
+@extends('layouts.base')
 @section('body')
     <div class="container mt-4">
         @foreach($users as $user)

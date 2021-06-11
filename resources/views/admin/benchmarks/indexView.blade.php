@@ -17,28 +17,14 @@
                     </ul>
                 </div>
             </div>
-
-            <button type="button" class="btn btn-success"
-                    onclick="window.location='{{ route("moderator.approved_result", ['id' => $getBenchmark->id]) }}'">
-                Approved Result{{$getBenchmark->id}}</button>
-
-            <button type="button" class="btn btn-danger"
-                    onclick="window.location='{{ route("moderator.reject_result", ['id' => $getBenchmark->id]) }}'">
-                Reject Result{{$getBenchmark->id}}</button>
-            {{--                <div class="col-6">--}}
-            {{--                    @if($user->role->name == 'user')--}}
-            {{--                        <button type="button" class="btn btn-success"--}}
-            {{--                                onclick="window.location='{{ route("admin.update_moderator", ['id' => $user->id]) }}'">--}}
-            {{--                            Make a moderator--}}
-            {{--                        </button>--}}
-            {{--                    @endif--}}
-            {{--                    @if($user->role->name == 'moderator')--}}
-            {{--                        <button type="button" class="btn btn-success"--}}
-            {{--                                onclick="window.location='{{ route("admin.update_user", ['id' => $user->id]) }}'">--}}
-            {{--                            Make a user--}}
-            {{--                        </button>--}}
-            {{--                    @endif--}}
-            {{--                </div>--}}
+            @can('admin')
+                <button type="button" class="btn btn-success" onclick="window.location='{{ route("admin.approved_result_benchmark", ['id' => $getBenchmark->id]) }}'">Approved Result{{$getBenchmark->id}}</button>
+                <button type="button" class="btn btn-danger" onclick="window.location='{{ route("admin.reject_result_benchmark", ['id' => $getBenchmark->id]) }}'">Reject Result{{$getBenchmark->id}}</button>
+            @endcan
+            @can('moderator')
+                <button type="button" class="btn btn-success" onclick="window.location='{{ route("moderator.approved_result_benchmark", ['id' => $getBenchmark->id]) }}'">Approved Result{{$getBenchmark->id}}</button>
+                <button type="button" class="btn btn-danger" onclick="window.location='{{ route("moderator.reject_result_benchmark", ['id' => $getBenchmark->id]) }}'">Reject Result{{$getBenchmark->id}}</button>
+            @endcan
         </div>
     </div>
 @endsection

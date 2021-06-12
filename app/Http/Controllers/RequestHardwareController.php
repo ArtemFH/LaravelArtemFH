@@ -58,7 +58,7 @@ class RequestHardwareController extends Controller
 
     public function requestBenchmark(Request $request)
     {
-        $request->validate([
+        $validate = $request->validate([
             'score' => 'required',
             'image' => 'required|file',
             'nomination_id' => 'required'
@@ -68,7 +68,7 @@ class RequestHardwareController extends Controller
 
         Benchmark::create($request->only('score', 'nomination_id') + ['image' => $filename, 'user_id' => Auth::id()]);
 
-        return redirect(route('home.head'));
+        return redirect(route('user.profile'));
     }
 
     public function updateHardwareAvailability(Request $request)

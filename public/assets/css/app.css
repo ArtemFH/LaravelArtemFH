@@ -117,6 +117,23 @@ form {
     color: black !important;
 }
 
+.buttonUnder {
+    background-color: #4F8088;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 auto;
+}
+
+.buttonUnder:hover {
+    background-color: #fff1d8 !important;
+    color: black !important;
+}
+
+.buttonUnder:focus {
+    background-color: #fff1d8 !important;
+    color: black !important;
+}
+
 input {
     border: none !important;
     background-color: #fff1d8 !important;
@@ -295,7 +312,7 @@ footer div p {
     display: flex;
 }
 
-.block-result-left p, div {
+.block-result-left p, h5, small, span {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -319,4 +336,98 @@ footer div p {
 
 form {
     max-width: 500px !important;
+}
+
+.container-profile {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.block-profile {
+    margin: 10px;
+}
+
+.content-profile {
+    height: 100%;
+    display: grid;
+}
+
+.block-side {
+    width: 25%;
+    min-width: 20%;
+}
+
+.block-center {
+    min-width: 30%;
+    width: 40%;
+}
+
+.bottom-container-profile {
+    height: 100px;
+    margin: 10px;
+    background-color: grey;
+}
+
+
+.content-profile .contains {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.list-group-item-profile {
+    padding: 0;
+}
+
+.nomination-block {
+    text-align: center;
+    font-weight: 600;
+    border-right: 5px solid #4F8088;
+    display: grid;
+    align-items: center;
+    padding: 0;
+}
+
+.profile-block-item {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content-profile .content-profile-info, .content-profile-image {
+    display: flex;
+    white-space: normal;
+    text-overflow: ellipsis;
+}
+
+.content-profile img {
+    max-height: 95%;
+    max-width: 200px;
+    border-radius: 0 25px 25px 0;
+}
+
+.content-profile-image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.content-profile-info ul {
+    list-style: none;
+    padding: 5px;
+    color: #ffefcf !important;
+}
+
+.row-result {
+    margin: auto 0;
+}
+
+.col-9 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.list-group-item-profile h4 {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
 }

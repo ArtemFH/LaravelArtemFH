@@ -17,33 +17,36 @@ class BenchmarkController extends Controller
             'title' => 'Homе'
         );
 
-        $benchmarkCPUs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+        $benchmarkCPUs = User::join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
             ->where('benchmarks.approved', '=', true)
             ->where('benchmarks.reject', '=', false)
             ->where('benchmarks.nomination_id', '10')
-            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
-            ->where('hardwares.approved', '=', true)
-            ->where('hardwares.reject', '=', false)
+            ->orderBy('score', 'desc')
             ->limit(5)
             ->get();
 
-        $benchmarkGPUs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+        $benchmarkGPUs = User::join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
             ->where('benchmarks.approved', '=', true)
             ->where('benchmarks.reject', '=', false)
             ->where('benchmarks.nomination_id', '20')
-            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
-            ->where('hardwares.approved', '=', true)
-            ->where('hardwares.reject', '=', false)
+            ->orderBy('score', 'desc')
             ->limit(5)
             ->get();
 
-        $benchmarkRAMs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+        $benchmarkRAMs = User::join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
             ->where('benchmarks.approved', '=', true)
             ->where('benchmarks.reject', '=', false)
             ->where('benchmarks.nomination_id', '30')
-            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
-            ->where('hardwares.approved', '=', true)
-            ->where('hardwares.reject', '=', false)
+            ->orderBy('score', 'desc')
             ->limit(5)
             ->get();
 
@@ -58,13 +61,14 @@ class BenchmarkController extends Controller
             'urlRoute' => 'results.'
         );
 
-        $benchmarkCPUs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+        $benchmarkCPUs = User::join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
             ->where('benchmarks.approved', '=', true)
             ->where('benchmarks.reject', '=', false)
             ->where('benchmarks.nomination_id', '10')
-            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
-            ->where('hardwares.approved', '=', true)
-            ->where('hardwares.reject', '=', false)
+            ->orderBy('score', 'desc')
             ->limit(100)
             ->get();
 
@@ -79,13 +83,14 @@ class BenchmarkController extends Controller
             'urlRoute' => 'results.GPU.'
         );
 
-        $benchmarkGPUs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+        $benchmarkGPUs = User::join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
             ->where('benchmarks.approved', '=', true)
             ->where('benchmarks.reject', '=', false)
             ->where('benchmarks.nomination_id', '20')
-            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
-            ->where('hardwares.approved', '=', true)
-            ->where('hardwares.reject', '=', false)
+            ->orderBy('score', 'desc')
             ->limit(100)
             ->get();
 
@@ -100,13 +105,14 @@ class BenchmarkController extends Controller
             'urlRoute' => 'results.'
         );
 
-        $benchmarkRAMs = User::join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
+        $benchmarkRAMs = User::join('hardwares', 'users.id', '=', 'hardwares.user_id')
+            ->where('hardwares.approved', '=', true)
+            ->where('hardwares.reject', '=', false)
+            ->join('benchmarks', 'users.id', '=', 'benchmarks.user_id')
             ->where('benchmarks.approved', '=', true)
             ->where('benchmarks.reject', '=', false)
             ->where('benchmarks.nomination_id', '30')
-            ->join('hardwares', 'users.id', '=', 'hardwares.user_id')
-            ->where('hardwares.approved', '=', true)
-            ->where('hardwares.reject', '=', false)
+            ->orderBy('score', 'desc')
             ->limit(100)
             ->get();
 
@@ -121,6 +127,10 @@ class BenchmarkController extends Controller
         );
 
         $indexResultGet = Benchmark::find($indexResult);
+
+        if (!$indexResultGet) {
+            return redirect(route('home.head'));
+        }
 
         return view('benchmarks.results.index', compact('indexResultGet'))->with($data);
     }

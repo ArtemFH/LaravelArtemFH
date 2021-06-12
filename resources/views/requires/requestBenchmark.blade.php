@@ -9,17 +9,18 @@
         <div class="form-group">
             <label for="score" class="col-form-label-lg">Score</label>
             <input id="score" class="form-control" name="score" autocomplete="off" type="number" value=""
-                   placeholder="Score" required>
-            @error('Score')
+                   placeholder="Score">
+            @error('score')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
-        <div class="form-group">
-            <label for="image" class="col-form-label-lg">Image</label>
-            <input id="image" class="form-control-file" name="image" autocomplete="off" type="file"
-                   accept=".png, .jpg, .jpeg"
-                   value="" placeholder="Image" required>
-            @error('Image')
+        <div class="form-group" style="display: grid">
+            <label for="c-file" class="col-form-label-lg">Result</label>
+            <div id="c-file" class="custom-file">
+                <input type="file" name="image" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Example result input</label>
+            </div>
+            @error('image')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>

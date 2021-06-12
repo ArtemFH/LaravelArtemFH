@@ -16,6 +16,7 @@ class ModeratorSeeder extends Seeder
                 'email' => 'voice@mail.ru',
                 'role_id' => '2',
                 'like_nomination_id' => '20',
+                'avatar' => 'user/ArtemFH.png'
             ]
         ];
         DB::table('users')->insert($users);

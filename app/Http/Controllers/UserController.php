@@ -81,8 +81,13 @@ class UserController extends Controller
 
         $hardware = Hardware::where('user_id', Auth::id())->first();
 
+        $user = User::find(Auth::id());
 
-        return view('user.profile', compact('hardware'))->with($data);
+        $bestCPU = Benchmark::where('user_id', Auth::id())->where('nomination_id', '10')->where('approved', true)->where('reject', false)->orderBy('score', 'desc')->limit(1)->first();
+        $bestGPU = Benchmark::where('user_id', Auth::id())->where('nomination_id', '20')->where('approved', true)->where('reject', false)->orderBy('score', 'desc')->limit(1)->first();
+        $bestRAM = Benchmark::where('user_id', Auth::id())->where('nomination_id', '30')->where('approved', true)->where('reject', false)->orderBy('score', 'desc')->limit(1)->first();
+
+        return view('user.profile', compact('hardware', 'user', 'bestCPU', 'bestGPU', 'bestRAM'))->with($data);
     }
 
 

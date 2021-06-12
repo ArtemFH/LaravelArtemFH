@@ -219,35 +219,35 @@
                     @if($hardware == !null)
                         <div>
                             <div></div>
-                            <div>
+                            <div class="hardware-detail-info">
                                 <div>
-                                    <img src="">
+                                    <img src="{{url('svg/cpu.svg')}}">
                                     <div>{{ $hardware->CPU }}</div>
                                     <span></span>
                                 </div>
                                 <div>
-                                    <img src="">
+                                    <img src="{{url('svg/motherboard.svg')}}">
+                                    <div>{{ $hardware->motherboard }}</div>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <img src="{{url('svg/gpu.svg')}}">
                                     <div>{{ $hardware->GPU }}</div>
                                     <span></span>
                                 </div>
                                 <div>
-                                    <img src="">
+                                    <img src="{{url('svg/ram.svg')}}">
                                     <div>{{ $hardware->RAM }}</div>
                                     <span></span>
                                 </div>
                                 <div>
-                                    <img src="">
+                                    <img src="{{url('svg/psu.svg')}}">
                                     <div>{{ $hardware->PSU }}</div>
                                     <span></span>
                                 </div>
                                 <div>
-                                    <img src="">
+                                    <img src="{{url('svg/storage.svg')}}">
                                     <div>{{ $hardware->storage }}</div>
-                                    <span></span>
-                                </div>
-                                <div>
-                                    <img src="">
-                                    <div>{{ $hardware->motherboard }}</div>
                                     <span></span>
                                 </div>
                             </div>

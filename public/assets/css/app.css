@@ -364,7 +364,6 @@ form {
 }
 
 .bottom-container-profile {
-    height: 100px;
     margin: 10px;
     background-color: grey;
 }
@@ -430,4 +429,9 @@ form {
     margin: 0 auto;
     width: 90%;
     text-align: center;
+}
+
+.hardware-detail-info img {
+    height: 25px;
+    width: 25px;
 }

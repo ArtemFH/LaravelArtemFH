@@ -101,7 +101,8 @@ class RequestHardwareController extends Controller
         $hardware->PSU = $request->PSU;
         $hardware->storage = $request->storage;
         $hardware->motherboard = $request->motherboard;
-        $hardware->approved = 0;
+        $hardware->approved = false;
+        $hardware->reject = false;
         $hardware->save();
 
         return redirect(route('user.profile'));

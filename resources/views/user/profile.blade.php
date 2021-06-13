@@ -10,7 +10,7 @@
                 <div class="block-side block-profile">
                     <div class="content-profile info-block">
                         <div class="content-profile-image">
-                            <img src="{{ $user->avatar }}">
+                            <img alt="" src="{{ $user->avatar }}">
                         </div>
                         <div class="content-profile-info">
                             <ul>
@@ -215,46 +215,117 @@
                 @endif
             </div>
             <div class="bottom-container-profile">
-                <div class="bottom-block-profile">
-                    @if($hardware == !null)
+                @if($hardware == !null)
+                    <div class="top-block-hardware">
+                        <div class="block-button-status">
+                            <div class="block-button-status-child">
+                                <button type="button" class="button-status buttonUnder btn btn-success" onclick="window.location='{{ route('user.updateHardware') }}'">Update hardware</button>
+                                <button type="button" class="button-status buttonUnder btn btn-danger" onclick="window.location='{{ route('user.deleteHardware') }}'">Delete hardware</button>
+                            </div>
+                        </div>
+                        @if($hardware->approved == false and $hardware->reject == false)
+                            <div class="status-block status-under">
+                                <div class="status-block-text">
+                                    Status: Under consideration
+                                </div>
+                            </div>
+                        @elseif($hardware->approved == true and $hardware->reject == false)
+                            <div class="status-block status-confirmed">
+                                <div class="status-block-text">
+                                    Status: Confirmed
+                                </div>
+                            </div>
+                        @elseif($hardware->approved == false and $hardware->reject == true)
+                            <div class="status-block status-reject">
+                                <div class="status-block-text">
+                                    Status: Rejected
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="bottom-block-profile">
                         <div>
                             <div></div>
                             <div class="hardware-detail-info">
-                                <div>
-                                    <img src="{{url('svg/cpu.svg')}}">
-                                    <div>{{ $hardware->CPU }}</div>
-                                    <span></span>
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/cpu.svg')}}">
+                                    <div class="info-hardware-high">{{ $hardware->CPU }}</div>
+                                    <span class="info-hardware-low">CPU</span>
                                 </div>
-                                <div>
-                                    <img src="{{url('svg/motherboard.svg')}}">
-                                    <div>{{ $hardware->motherboard }}</div>
-                                    <span></span>
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/motherboard.svg')}}">
+                                    <div class="info-hardware-high">{{ $hardware->motherboard }}</div>
+                                    <span class="info-hardware-low">MotherBoard</span>
                                 </div>
-                                <div>
-                                    <img src="{{url('svg/gpu.svg')}}">
-                                    <div>{{ $hardware->GPU }}</div>
-                                    <span></span>
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/gpu.svg')}}">
+                                    <div class="info-hardware-high">{{ $hardware->GPU }}</div>
+                                    <span class="info-hardware-low">GPU</span>
                                 </div>
-                                <div>
-                                    <img src="{{url('svg/ram.svg')}}">
-                                    <div>{{ $hardware->RAM }}</div>
-                                    <span></span>
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/ram.svg')}}">
+                                    <div class="info-hardware-high">{{ $hardware->RAM }}</div>
+                                    <span class="info-hardware-low">RAM</span>
                                 </div>
-                                <div>
-                                    <img src="{{url('svg/psu.svg')}}">
-                                    <div>{{ $hardware->PSU }}</div>
-                                    <span></span>
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/psu.svg')}}">
+                                    <div class="info-hardware-high">{{ $hardware->PSU }}</div>
+                                    <span class="info-hardware-low">PSU</span>
                                 </div>
-                                <div>
-                                    <img src="{{url('svg/storage.svg')}}">
-                                    <div>{{ $hardware->storage }}</div>
-                                    <span></span>
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/storage.svg')}}">
+                                    <div class="info-hardware-high">{{ $hardware->storage }}</div>
+                                    <span class="info-hardware-low">Storage</span>
                                 </div>
                             </div>
                         </div>
-                    @else
-                    @endif
-                </div>
+                    </div>
+                @else
+                    <div class="top-block-hardware">
+                        <div class="status-block status-under">
+                            <div class="status-block-text">
+                                Status: Not available
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-block-profile">
+                        <div>
+                            <div></div>
+                            <div class="hardware-detail-info">
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/cpu.svg')}}">
+                                    <div class="info-hardware-high">Is unknown</div>
+                                    <span class="info-hardware-low">CPU</span>
+                                </div>
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/motherboard.svg')}}">
+                                    <div class="info-hardware-high">Is unknown</div>
+                                    <span class="info-hardware-low">MotherBoard</span>
+                                </div>
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/gpu.svg')}}">
+                                    <div class="info-hardware-high">Is unknown</div>
+                                    <span class="info-hardware-low">GPU</span>
+                                </div>
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/ram.svg')}}">
+                                    <div class="info-hardware-high">Is unknown</div>
+                                    <span class="info-hardware-low">RAM</span>
+                                </div>
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/psu.svg')}}">
+                                    <div class="info-hardware-high">Is unknown</div>
+                                    <span class="info-hardware-low">PSU</span>
+                                </div>
+                                <div class="hardware-detail-block">
+                                    <img alt="" src="{{url('svg/storage.svg')}}">
+                                    <div class="info-hardware-high">Is unknown</div>
+                                    <span class="info-hardware-low">Storage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

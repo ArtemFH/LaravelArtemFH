@@ -8,7 +8,7 @@
         @csrf
         <div class="form-group">
             <label for="username" class="col-form-label-lg">Username</label>
-            <input id="username" class="form-control" name="username" autocomplete="off" type="username" value="" placeholder="Username">
+            <input id="username" class="form-control" name="username" autocomplete="off" type="text" value="" placeholder="Username">
             @error('username')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -45,7 +45,7 @@
         <div class="form-group" style="display: grid">
             <label for="c-file" class="col-form-label-lg">Avatar</label>
             <div id="c-file" class="custom-file">
-                <input type="file" name="avatar" class="custom-file-input" id="customFile">
+                <input type="file" name="avatar" class="custom-file-input" id="customFile" accept=".gif,.jpg,.jpeg,.png,.webp">
                 <label class="custom-file-label" for="customFile">Example avatar input</label>
             </div>
         </div>

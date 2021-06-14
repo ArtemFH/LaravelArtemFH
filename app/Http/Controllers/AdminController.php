@@ -18,13 +18,17 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.admin-panel');
+        $data = array(
+            'title' => 'Admin Panel'
+        );
+
+        return view('admin.admin-panel')->with($data);
     }
 
     public function getUsers()
     {
         $data = array(
-            'title' => 'Admin Panel'
+            'title' => 'Admin Panel - Users'
         );
 
         $users = User::where('role_id', 1)->orWhere('role_id', 2)->orderBy('id')->paginate(12);
@@ -34,7 +38,7 @@ class AdminController extends Controller
     public function getHardware()
     {
         $data = array(
-            'title' => 'Moderator Panel'
+            'title' => 'Admin Panel - Hardware'
         );
 
         $dontApproved = Hardware::where('approved', false)->where('reject', false)->paginate(12);
@@ -44,7 +48,7 @@ class AdminController extends Controller
     public function getResultHardware($id)
     {
         $data = array(
-            'title' => 'Moderator Panel'
+            'title' => 'Admin Panel - Hardware'
         );
 
         $getHardware = Hardware::where('id', $id)->first();
@@ -72,17 +76,17 @@ class AdminController extends Controller
     public function getBenchmarks()
     {
         $data = array(
-            'title' => 'Moderator Panel'
+            'title' => 'Admin Panel - Benchmarks'
         );
 
-        $dontApproved = Benchmark::where('approved', false)->where('reject', false)->paginate(12);
+        $dontApproved = Benchmark::where('approved', false)->where('reject', false)->orderBy('score', 'DESC')->paginate(12);
         return view('admin.benchmarks.index', compact('dontApproved'))->with($data);
     }
 
     public function getResultBenchmark($id)
     {
         $data = array(
-            'title' => 'Moderator Panel'
+            'title' => 'Admin Panel - Benchmarks'
         );
 
         $getBenchmark = Benchmark::where('id', $id)->first();

@@ -1,5 +1,8 @@
 @extends('layouts.base')
-
+@section('head')
+    @parent
+    <title>{{ $title }}</title>
+@endsection
 @section('body')
     <div class="container m-auto">
         <div class="row admin-panel">

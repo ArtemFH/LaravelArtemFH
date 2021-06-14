@@ -182,7 +182,7 @@ select:focus {
 
 .card {
     border: 1px solid rgba(0, 0, 0, 0.2);
-    background: #fff6dd;
+    background-color: #4f8088;
     width: 100%;
 }
 
@@ -598,4 +598,40 @@ button {
 .card-image {
     margin: 0 auto;
     max-height: 1500px;
+    max-width: 90%;
+}
+
+.buttonAj {
+    margin: 10px;
+}
+
+.buttonsAj {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hardwareAj {
+    background-color: transparent;
+    border: 5px solid #4F8088;
+    border-radius: 15px;
+    width: 90%;
+    margin: 0 auto 10px auto;
+}
+
+.dontindex {
+    color: white;
+    text-align: center
+}
+
+.info-view {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.info-view-block {
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
 }

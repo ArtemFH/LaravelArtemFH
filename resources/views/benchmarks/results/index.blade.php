@@ -1,19 +1,17 @@
 @extends('layouts.base')
 @section('head')
     @parent
-    <title>{{ $title }}</title>
+    <title>Result: {{ $title }}</title>
 @endsection
 @section('body')
-
-    {{--    {{ dd($indexResultGet) }}--}}
-    <div class="container pb-4">
-        <div class="row card">
+    <div class="container pb-4 info-view">
+        <div class="row card info-view-block">
             <div style="display: flex">
                 <div class="">
                     <div class="card-body">
                         <p class="mb-1">Score: {{ $indexResultGet->score }}</p>
                         <p class="card-text">Create result: {{ $indexResultGet->created_at }}</p>
-                        <a href="/user/{{$indexResultGet->user->username}}" class="btn btn-primary">{{ $indexResultGet->user->username }}</a>
+                        <button type="button" class="buttonSuccess btn btn-success" onclick="window.location='{{ route("user.profileView", ['indexUser' => $indexResultGet->user->username]) }}'">{{ $indexResultGet->user->username }}</button>
                     </div>
                 </div>
             </div>

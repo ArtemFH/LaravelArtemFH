@@ -17,13 +17,17 @@ class ModeratorController extends Controller
 
     public function index()
     {
-        return view('admin.moderator-panel');
+        $data = array(
+            'title' => 'Moderator Panel'
+        );
+
+        return view('admin.moderator-panel')->with($data);
     }
 
     public function getHardware()
     {
         $data = array(
-            'title' => 'Moderator Panel'
+            'title' => 'Moderator Panel - Hardware'
         );
 
         $dontApproved = Hardware::where('approved', false)->where('reject', false)->paginate(12);
@@ -33,7 +37,7 @@ class ModeratorController extends Controller
     public function getResultHardware($id)
     {
         $data = array(
-            'title' => 'Moderator Panel'
+            'title' => 'Moderator Panel - Hardware'
         );
 
         $getHardware = Hardware::where('id', $id)->first();
@@ -61,17 +65,17 @@ class ModeratorController extends Controller
     public function getBenchmarks()
     {
         $data = array(
-            'title' => 'Moderator Panel'
+            'title' => 'Moderator Panel - Benchmarks'
         );
 
-        $dontApproved = Benchmark::where('approved', false)->where('reject', false)->paginate(12);
+        $dontApproved = Benchmark::where('approved', false)->where('reject', false)->orderBy('score', 'DESC')->paginate(12);
         return view('admin.benchmarks.index', compact('dontApproved'))->with($data);
     }
 
     public function getResultBenchmark($id)
     {
         $data = array(
-            'title' => 'Moderator Panel'
+            'title' => 'Moderator Panel - Benchmarks'
         );
 
         $getBenchmark = Benchmark::where('id', $id)->first();

@@ -126,6 +126,10 @@
     .admin-panel {
         margin-top: 0;
     }
+
+    .card-image {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 510px) {

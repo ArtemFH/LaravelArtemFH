@@ -96,9 +96,9 @@ class UserController extends Controller
         $indexUserGet = User::where('username', $indexUser)->first();
 
         if ($indexUserGet) {
-            $resultsCPU = Benchmark::query()->where('user_id', $indexUserGet->id)->where('nomination_id', 10)->limit(5)->orderBy('score', 'DESC')->get();
-            $resultsGPU = Benchmark::query()->where('user_id', $indexUserGet->id)->where('nomination_id', 20)->limit(5)->orderBy('score', 'DESC')->get();
-            $resultsRAM = Benchmark::query()->where('user_id', $indexUserGet->id)->where('nomination_id', 30)->limit(5)->orderBy('score', 'DESC')->get();
+            $resultsCPU = Benchmark::query()->where('user_id', $indexUserGet->id)->where('nomination_id', 10)->where('approved', true)->where('reject', false)->limit(5)->orderBy('score', 'DESC')->get();
+            $resultsGPU = Benchmark::query()->where('user_id', $indexUserGet->id)->where('nomination_id', 20)->where('approved', true)->where('reject', false)->limit(5)->orderBy('score', 'DESC')->get();
+            $resultsRAM = Benchmark::query()->where('user_id', $indexUserGet->id)->where('nomination_id', 30)->where('approved', true)->where('reject', false)->limit(5)->orderBy('score', 'DESC')->get();
 
             $hardware = Hardware::where('user_id', $indexUserGet->id)->first();
 

@@ -1,4 +1,8 @@
 @extends('layouts.base')
+@section('head')
+    @parent
+    <title>{{ $title }}</title>
+@endsection
 @section('body')
     <div class="container mt-4">
         <div class="container-users">

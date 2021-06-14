@@ -1,34 +1,29 @@
 @extends('layouts.base')
 @section('body')
-    <style type="text/css">
-        .my-active span {
-            background-color: #5cb85c !important;
-            color: white !important;
-            border-color: #5cb85c !important;
-        }
-    </style>
     <div class="container mt-4">
-        @foreach($dontApproved as $indexApproved)
-            <div class="container row b">
-                <div class="col-6">
-                    <div class="card mb-3">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{ $indexApproved->score }}</li>
-                            <li class="list-group-item">{{ $indexApproved->user->username }}</li>
-                            <li class="list-group-item">{{ $indexApproved->nomination->name }}</li>
-                        </ul>
+        <div class="container-users">
+            @foreach($dontApproved as $indexBenchmark)
+                <div class="index-user">
+                    <div style="min-width: 200px;">
+                        <div class="top-block-user">
+                            <span>Score: {{ $indexBenchmark->score }}</span>
+                            <span>Enthusiast: {{ $indexBenchmark->user->username }}</span>
+                            <span>Nomination: {{ $indexBenchmark->nomination->name }}</span>
+                        </div>
+                        <div class="bottom-block-user">
+                            @can('admin')
+                                <button type="button" class="buttonGet btn btn-success" onclick="window.location='{{ route("admin.get_result_benchmark", ['id' => $indexBenchmark->id]) }}'">Redirect to {{$indexBenchmark->id}}</button>
+                            @endcan
+                            @can('moderator')
+                                <button type="button" class="buttonGet btn btn-success" onclick="window.location='{{ route("moderator.get_result_benchmark", ['id' => $indexBenchmark->id]) }}'">Redirect to {{$indexBenchmark->id}}</button>
+                            @endcan
+                        </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    @can('admin')
-                        <button type="button" class="btn btn-success" onclick="window.location='{{ route("admin.get_result_benchmark", ['id' => $indexApproved->id]) }}'">Redirect to {{$indexApproved->id}}</button>
-                    @endcan
-                    @can('moderator')
-                        <button type="button" class="btn btn-success" onclick="window.location='{{ route("moderator.get_result_benchmark", ['id' => $indexApproved->id]) }}'">Redirect to {{$indexApproved->id}}</button>
-                    @endcan
-                </div>
-            </div>
-        @endforeach
-        {{ $dontApproved->links('components.pagination') }}
+            @endforeach
+        </div>
+        <div class="pagination-block">
+            {{ $dontApproved->links('components.pagination') }}
+        </div>
     </div>
 @endsection

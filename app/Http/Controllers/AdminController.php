@@ -27,7 +27,7 @@ class AdminController extends Controller
             'title' => 'Admin Panel'
         );
 
-        $users = User::where('role_id', 1)->orWhere('role_id', 2)->get();
+        $users = User::where('role_id', 1)->orWhere('role_id', 2)->orderBy('id')->paginate(12);
         return view('admin.users.index', compact('users'))->with($data);
     }
 
@@ -37,7 +37,7 @@ class AdminController extends Controller
             'title' => 'Moderator Panel'
         );
 
-        $dontApproved = Hardware::where('approved', false)->where('reject', false)->paginate(3);
+        $dontApproved = Hardware::where('approved', false)->where('reject', false)->paginate(12);
         return view('admin.hardware.index', compact('dontApproved'))->with($data);
     }
 
@@ -75,7 +75,7 @@ class AdminController extends Controller
             'title' => 'Moderator Panel'
         );
 
-        $dontApproved = Benchmark::where('approved', false)->where('reject', false)->paginate(3);
+        $dontApproved = Benchmark::where('approved', false)->where('reject', false)->paginate(12);
         return view('admin.benchmarks.index', compact('dontApproved'))->with($data);
     }
 

@@ -26,7 +26,7 @@ class ModeratorController extends Controller
             'title' => 'Moderator Panel'
         );
 
-        $dontApproved = Hardware::where('approved', false)->where('reject', false)->paginate(3);
+        $dontApproved = Hardware::where('approved', false)->where('reject', false)->paginate(12);
         return view('admin.hardware.index', compact('dontApproved'))->with($data);
     }
 
@@ -64,7 +64,7 @@ class ModeratorController extends Controller
             'title' => 'Moderator Panel'
         );
 
-        $dontApproved = Benchmark::where('approved', false)->where('reject', false)->paginate(3);
+        $dontApproved = Benchmark::where('approved', false)->where('reject', false)->paginate(12);
         return view('admin.benchmarks.index', compact('dontApproved'))->with($data);
     }
 

@@ -1,30 +1,29 @@
 @extends('layouts.base')
 @section('body')
-    <style type="text/css">
-        .my-active span {
-            background-color: #5cb85c !important;
-            color: white !important;
-            border-color: #5cb85c !important;
-        }
-    </style>
     <div class="container mt-4">
-        @foreach($dontApproved as $indexApproved)
-            <div class="container row b">
-                <div class="col-6">
-                    <div class="card mb-3">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{ $indexApproved->user->username }}</li>
-                        </ul>
+        <div class="container-users">
+            @foreach($dontApproved as $indexHardware)
+                <div class="index-user">
+                    <div style="min-width: 200px;">
+                        <div class="top-block-user">
+                            <span>Hardware: {{ \App\Models\Hardware::where('user_id', $indexHardware->user->id)->value($indexHardware->user->like_nomination->name)}}</span>
+                            <span>Enthusiast: {{ $indexHardware->user->username }}</span>
+                            <span>Like Nomination: {{ $indexHardware->user->like_nomination->name }}</span>
+                        </div>
+                        <div class="bottom-block-user">
+                            @can('admin')
+                                <button type="button" class="buttonGet btn btn-success" onclick="window.location='{{ route("admin.get_result_hardware", ['id' => $indexHardware->id]) }}'">Redirect to {{$indexHardware->id}}</button>
+                            @endcan
+                            @can('moderator')
+                                <button type="button" class="buttonGet btn btn-success" onclick="window.location='{{ route("moderator.get_result_hardware", ['id' => $indexHardware->id]) }}'">Redirect to {{$indexHardware->id}}</button>
+                            @endcan
+                        </div>
                     </div>
                 </div>
-                @can('admin')
-                    <button type="button" class="btn btn-success" onclick="window.location='{{ route("admin.get_result_hardware", ['id' => $indexApproved->id]) }}'">Redirect to {{$indexApproved->id}}</button>
-                @endcan
-                @can('moderator')
-                    <button type="button" class="btn btn-success" onclick="window.location='{{ route("moderator.get_result_hardware", ['id' => $indexApproved->id]) }}'">Redirect to {{$indexApproved->id}}</button>
-                @endcan
-            </div>
-        @endforeach
-        {{ $dontApproved->links('components.pagination') }}
+            @endforeach
+        </div>
+        <div class="pagination-block">
+            {{ $dontApproved->links('components.pagination') }}
+        </div>
     </div>
 @endsection

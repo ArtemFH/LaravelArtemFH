@@ -8,7 +8,7 @@
         @csrf
         <div class="form-group">
             <label for="score" class="col-form-label-lg">Score</label>
-            <input id="score" class="form-control" name="score" autocomplete="off" type="number" value=""
+            <input id="score" class="form-control" name="score" autocomplete="off" type="number" min="1" max="999999999"
                    placeholder="Score">
             @error('score')
             <div class="alert alert-danger">{{ $message }}</div>

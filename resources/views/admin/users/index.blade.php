@@ -1,32 +1,29 @@
 @extends('layouts.base')
 @section('body')
     <div class="container mt-4">
-        @foreach($users as $user)
-            <div class="container row b">
-                <div class="col-6">
-                    <div class="card mb-3">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{ $user->username }}</li>
-                            <li class="list-group-item">{{ $user->email }}</li>
-                            <li class="list-group-item">{{ $user->role->name }}</li>
-                        </ul>
+        <div class="container-users">
+            @foreach($users as $user)
+                <div class="index-user">
+                    <div style="min-width: 200px;">
+                        <div class="top-block-user">
+                            <span>Username: {{ $user->username }}</span>
+                            <span>E-mail: {{ $user->email }}</span>
+                            <span>Role: {{ $user->role->name }}</span>
+                        </div>
+                        <div class="bottom-block-user">
+                            @if($user->role->name == 'user')
+                                <button type="button" class="buttonGet btn btn-success" onclick="window.location='{{ route('admin.update_moderator', ['id' => $user->id]) }}'">Make a moderator</button>
+                            @endif
+                            @if($user->role->name == 'moderator')
+                                <button type="button" class="buttonGet btn btn-success" onclick="window.location='{{ route('admin.update_user', ['id' => $user->id]) }}'">Make a user</button>
+                            @endif
+                        </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    @if($user->role->name == 'user')
-                        <button type="button" class="btn btn-success"
-                                onclick="window.location='{{ route('admin.update_moderator', ['id' => $user->id]) }}'">
-                            Make a moderator
-                        </button>
-                    @endif
-                    @if($user->role->name == 'moderator')
-                        <button type="button" class="btn btn-success"
-                                onclick="window.location='{{ route('admin.update_user', ['id' => $user->id]) }}'">
-                            Make a user
-                        </button>
-                    @endif
-                </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
+        <div class="pagination-block">
+            {{ $users->links('components.pagination') }}
+        </div>
     </div>
 @endsection

@@ -122,6 +122,10 @@
     .content-profile img {
         max-width: 100%;
     }
+
+    .admin-panel {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 510px) {
@@ -148,6 +152,18 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .block-admin-panel {
+        max-width: 300px;
+    }
+
+    .top-block-user span {
+
+    }
+
+    .index-user {
+        padding: 0;
     }
 }
 

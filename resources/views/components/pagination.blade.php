@@ -2,11 +2,11 @@
     <ul class="pagination">
         @if ($paginator->onFirstPage())
             <li class="page-item disabled">
-                <span class="page-link">← Previous</span>
+                <span class="page-link">←</span>
             </li>
         @else
             <li class="page-item">
-                <a class="page-link next" href="{{ $paginator->previousPageUrl() }}" rel="prev">← Previous</a>
+                <a class="page-link next" href="{{ $paginator->previousPageUrl() }}" rel="prev">←</a>
             </li>
         @endif
         @foreach ($elements as $element)
@@ -31,11 +31,11 @@
         @endforeach
         @if ($paginator->hasMorePages())
             <li class="page-item">
-                <a class="page-link next" href="{{ $paginator->nextPageUrl() }}" rel="next">Next →</a>
+                <a class="page-link next" href="{{ $paginator->nextPageUrl() }}" rel="next">→</a>
             </li>
         @else
             <li class="page-item disabled">
-                <span class="page-link">Next →</span>
+                <span class="page-link">→</span>
             </li>
         @endif
     </ul>

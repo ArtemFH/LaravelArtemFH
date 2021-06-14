@@ -58,11 +58,16 @@ nav {
 .list-group-item {
     background-color: transparent;
     color: white;
-    border: 5px solid #4F8088;
+    border-left: 5px solid #4F8088;
+    border-right: 5px solid #4F8088;
+    border-top: 5px solid #4F8088;
 }
 
 .list-group-item:last-child {
     border-radius: 0 0 15px 15px;
+    border-left: 5px solid #4F8088;
+    border-right: 5px solid #4F8088;
+    border-bottom: 5px solid #4F8088;
 }
 
 .list-group-item:hover {
@@ -76,6 +81,9 @@ nav {
     text-decoration: none !important;
     text-align: center;
     border-radius: 15px 15px 0 0;
+    border-left: 5px solid #4F8088;
+    border-right: 5px solid #4F8088;
+    border-top: 5px solid #4F8088;
 }
 
 .list-group-item:first-child:hover {
@@ -269,29 +277,30 @@ footer div p {
 
 .page-item .page-link {
     border: 1px solid rgba(0, 0, 0, 0.2) !important;
-    background: #fff6dd;
+    background-color: #6CB7B7 !important;
     color: #86213D;
+    transition: all .3s;
+}
+
+.page-item .page-link:hover {
+    background-color: #fff1d8 !important;
+    color: black !important;
+    transition: all .3s;
+}
+
+.active .page-link:hover {
+    background-color: #4F8088 !important;
+    color: #86213D !important;
 }
 
 .active .page-link {
-    background-color: #DDC35D !important;
+    background-color: #4F8088 !important;
     color: #86213D !important;
 }
 
 .disabled .page-link {
-    background-color: #DDC35D !important;
+    background-color: #4F8088 !important;
     color: #86213D !important;
-}
-
-.page-item .next:hover {
-    transition: transform .3s;
-    transform: scale(1.05);
-}
-
-.page-item .next {
-    z-index: 10;
-    transition: transform .3s;
-    transform: scale(1);
 }
 
 .block-result-right {
@@ -503,4 +512,90 @@ form {
     margin: 0 10px;
     border-radius: 15px;
     height: 40px;
+}
+
+.admin-panel {
+    margin-top: 200px;
+    justify-content: space-around;
+}
+
+.admin-block {
+    text-align: center;
+}
+
+.admin-block img {
+    max-height: 100px;
+}
+
+.admin-block button {
+    margin: 15px auto;
+}
+
+.block-admin-panel {
+    max-width: 300px;
+    margin: 50px auto;
+}
+
+.my-active span {
+    background-color: #5cb85c !important;
+    color: white !important;
+    border-color: #5cb85c !important;
+}
+
+.index-user {
+    margin: 20px;
+    width: 340px;
+    background-color: #6CB7B7;
+    border-radius: 0 0 15px 15px;
+}
+
+.top-block-user {
+    display: grid;
+    padding: 20px;
+    color: #ffefcf;
+    font-weight: 500;
+}
+
+.container-users {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttonGet {
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    background-color: #4F8088;
+    border: none;
+    height: 45px;
+}
+
+.buttonGet:hover {
+    background-color: #fff1d8 !important;
+    color: black !important;
+}
+
+.buttonGet:focus {
+    background-color: #fff1d8 !important;
+    color: black !important;
+}
+
+.pagination-block {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.mb-2 {
+    text-align: center;
+    color: #fff1d8;
+}
+
+.card-image {
+    margin: 0 auto;
+    max-height: 1500px;
 }

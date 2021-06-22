@@ -12,7 +12,7 @@ window.addEventListener('scroll', function (e) {
             but_end.classList.remove('but-end')
         }
 
-        if (document.body.clientHeight == window.innerHeight + window.scrollY) {
+        if (document.body.clientHeight <= window.innerHeight + window.scrollY) {
             footer.classList.remove('footer-scroll')
         } else {
             footer.classList.add('footer-scroll')

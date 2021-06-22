@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
-    public function createUser(Request $request)
+    public function createUser(Request $request) //Регистрация пользователя
     {
         $validateFields = $request->validate([
             'username' => 'required',
@@ -54,7 +54,7 @@ class UserController extends Controller
         ]);
     }
 
-    public function login(Request $request)
+    public function login(Request $request) //Авторизация
     {
         $formfields = $request->only(['username', 'email', 'password']);
 
@@ -67,13 +67,13 @@ class UserController extends Controller
         ]);
     }
 
-    public function logout()
+    public function logout() //Выход
     {
         Auth::logout();
         return redirect(route('home.head'));
     }
 
-    public function profileView(Request $request)
+    public function profileView(Request $request)  //Отображение своего профиля
     {
         $data = array(
             'title' => 'Profile'
@@ -91,7 +91,7 @@ class UserController extends Controller
     }
 
 
-    public function profileUser(Request $request, $indexUser)
+    public function profileUser(Request $request, $indexUser) //Отображение чужого профиля
     {
         $indexUserGet = User::where('username', $indexUser)->first();
 
@@ -111,7 +111,7 @@ class UserController extends Controller
         return view('errors.404');
     }
 
-    public function registrationAvailability()
+    public function registrationAvailability() //Отображение формы регистрации
     {
         $data = array(
             'title' => 'Registration'
@@ -123,7 +123,7 @@ class UserController extends Controller
         return view('user.registration')->with($data);
     }
 
-    public function loginAvailability()
+    public function loginAvailability()//Отображение формы Авторизации
     {
         $data = array(
             'title' => 'Login'

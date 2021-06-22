@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class BenchmarkController extends Controller
 {
-    public function index()
+    public function index() //Отображение главной страницы с выводом результатов
     {
         $data = array(
             'title' => 'Homе'
@@ -53,7 +53,7 @@ class BenchmarkController extends Controller
         return view('home', compact('benchmarkCPUs', 'benchmarkGPUs', 'benchmarkRAMs'))->with($data);
     }
 
-    public function indexCpu()
+    public function indexCpu() //Вывод 100 результатов на категорию CPU
     {
         $data = array(
             'title' => 'CPU',
@@ -75,7 +75,7 @@ class BenchmarkController extends Controller
         return view('benchmarks.nomination.results', compact('benchmarkCPUs'))->with($data);
     }
 
-    public function indexGpu()
+    public function indexGpu() //Вывод 100 результатов на категорию GPU
     {
         $data = array(
             'title' => 'GPU',
@@ -97,7 +97,7 @@ class BenchmarkController extends Controller
         return view('benchmarks.nomination.results', compact('benchmarkGPUs'))->with($data);
     }
 
-    public function indexRam()
+    public function indexRam() //Вывод 100 результатов на категорию RAM
     {
         $data = array(
             'title' => 'RAM',
@@ -119,7 +119,7 @@ class BenchmarkController extends Controller
         return view('benchmarks.nomination.results', compact('benchmarkRAMs'))->with($data);
     }
 
-    public function indexResult(Request $request, $indexResult)
+    public function indexResult(Request $request, $indexResult) //Просмотр определенного результата
     {
         $data = array(
             'title' => $indexResult,

@@ -11,12 +11,12 @@ use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
-    public function __construct()
+    public function __construct() //Проверка доступа по ролям
     {
         $this->middleware('can:admin');
     }
 
-    public function index()
+    public function index() //Отображение админ панели
     {
         $data = array(
             'title' => 'Admin Panel'
@@ -25,7 +25,7 @@ class AdminController extends Controller
         return view('admin.admin-panel')->with($data);
     }
 
-    public function getUsers()
+    public function getUsers() //Вывод всех пользователей
     {
         $data = array(
             'title' => 'Admin Panel - Users'
@@ -35,7 +35,7 @@ class AdminController extends Controller
         return view('admin.users.index', compact('users'))->with($data);
     }
 
-    public function getHardware()
+    public function getHardware() //Вывод всех оборудований
     {
         $data = array(
             'title' => 'Admin Panel - Hardware'
@@ -45,7 +45,7 @@ class AdminController extends Controller
         return view('admin.hardware.index', compact('dontApproved'))->with($data);
     }
 
-    public function getResultHardware($id)
+    public function getResultHardware($id) //Возвращает данные об определенном оборудований
     {
         $data = array(
             'title' => 'Admin Panel - Hardware'
@@ -55,7 +55,7 @@ class AdminController extends Controller
         return view('admin.hardware.indexView', compact('getHardware'))->with($data);
     }
 
-    public function approvedResultHardware($id)
+    public function approvedResultHardware($id) //Подтверждение определнного оборудования
     {
         $object = Hardware::where('id', $id)->first();
         $object->approved = true;
@@ -64,7 +64,7 @@ class AdminController extends Controller
         return redirect(route('admin.panel_hardware'));
     }
 
-    public function rejectResultHardware($id)
+    public function rejectResultHardware($id) //Отклонения определенного оборудования
     {
         $object = Hardware::where('id', $id)->first();
         $object->reject = true;
@@ -73,7 +73,7 @@ class AdminController extends Controller
         return redirect(route('admin.panel_hardware'));
     }
 
-    public function getBenchmarks()
+    public function getBenchmarks() //Вывод всех результатов
     {
         $data = array(
             'title' => 'Admin Panel - Benchmarks'
@@ -83,7 +83,7 @@ class AdminController extends Controller
         return view('admin.benchmarks.index', compact('dontApproved'))->with($data);
     }
 
-    public function getResultBenchmark($id)
+    public function getResultBenchmark($id) //Вывод определенного результата
     {
         $data = array(
             'title' => 'Admin Panel - Benchmarks'
@@ -93,7 +93,7 @@ class AdminController extends Controller
         return view('admin.benchmarks.indexView', compact('getBenchmark'))->with($data);
     }
 
-    public function approvedResultBenchmark($id)
+    public function approvedResultBenchmark($id) //Подтверждение определенного результата
     {
         $object = Benchmark::where('id', $id)->first();
         $object->approved = true;
@@ -102,7 +102,7 @@ class AdminController extends Controller
         return redirect(route('admin.panel_benchmark'));
     }
 
-    public function rejectResultBenchmark($id)
+    public function rejectResultBenchmark($id) //Отклонение определенного результата
     {
         $object = Benchmark::where('id', $id)->first();
         $object->reject = true;
@@ -111,7 +111,7 @@ class AdminController extends Controller
         return redirect(route('admin.panel_benchmark'));
     }
 
-    public function setModerator($id)
+    public function setModerator($id) //Назначение пользователя модератором
     {
         if (Auth::id() != intval($id)) {
             if (Auth::user()->role_id == 3) {
@@ -124,7 +124,7 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    public function setUser($id)
+    public function setUser($id) //Назначение пользователя обычным пользователем
     {
         if (Auth::id() != intval($id)) {
             if (Auth::user()->role_id == 3) {

@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Benchmark;
 use App\Models\Hardware;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class RequestHardwareController extends Controller
 {
-    public function requestHardware(Request $request)
+    public function requestHardware(Request $request) //Отправить заявку на оборудование
     {
         if (Hardware::where('user_id', Auth::id())->first()) {
             return redirect('user.profile');
@@ -31,7 +30,7 @@ class RequestHardwareController extends Controller
         return redirect(route('user.profile'));
     }
 
-    public function requestHardwareAvailability()
+    public function requestHardwareAvailability() //Отображение формы на заявку на оборудование
     {
         $data = array(
             'title' => 'Hardware'
@@ -40,14 +39,14 @@ class RequestHardwareController extends Controller
         return view('requires.requestHardware')->with($data);
     }
 
-    public function deleteHardware(Request $request)
+    public function deleteHardware(Request $request) //Удалить своё оборудование
     {
         Hardware::where('user_id', Auth::id())->first()->delete();
 
         return redirect(route('user.profile'));
     }
 
-    public function requestBenchmarkAvailability()
+    public function requestBenchmarkAvailability() //Отображение формы на заявку на результат
     {
         $data = array(
             'title' => 'Hardware'
@@ -56,7 +55,7 @@ class RequestHardwareController extends Controller
         return view('requires.requestBenchmark')->with($data);
     }
 
-    public function requestBenchmark(Request $request)
+    public function requestBenchmark(Request $request)   //Отправить заявку на результат
     {
         $validate = $request->validate([
             'score' => 'required',
@@ -71,7 +70,7 @@ class RequestHardwareController extends Controller
         return redirect(route('user.profile'));
     }
 
-    public function updateHardwareAvailability(Request $request)
+    public function updateHardwareAvailability(Request $request) //Отображение формы на обновление оборудования
     {
         $data = array(
             'title' => 'Update Hardware'
@@ -82,7 +81,7 @@ class RequestHardwareController extends Controller
         return view('requires.updateHardware', compact('hardware'))->with($data);
     }
 
-    public function updateHardware(Request $request)
+    public function updateHardware(Request $request)//Отправить заявку на обновление оборудования
     {
         $request->validate([
             'CPU' => 'required',
@@ -108,13 +107,13 @@ class RequestHardwareController extends Controller
         return redirect(route('user.profile'));
     }
 
-    public function understandBenchmark()
+    public function understandBenchmark() //Удаление записи с бд своего отклоненного оборудования
     {
         Benchmark::where('user_id', Auth::id())->where('approved', false)->where('reject', true)->delete();
         return redirect()->back();
     }
 
-    public function understandHardware()
+    public function understandHardware()//Удаление записи с бд своих отклоненных результатов
     {
         Hardware::where('user_id', Auth::id())->where('approved', false)->where('reject', true)->delete();
         return redirect()->back();

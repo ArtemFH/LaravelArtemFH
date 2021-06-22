@@ -1,8 +1,6 @@
-/*Поменять цвет*/
 body {
     margin: 0;
     padding: 0;
-    /*background-color: #24375A;*/
     background-color: #1C313A;
     font-weight: 400;
 }
@@ -16,7 +14,6 @@ body {
     scrollbar-width: none;
 }
 
-/*Поменять цвет*/
 nav {
     color: #ffefcf;
     padding: 30px 100px !important;
@@ -635,4 +632,3 @@ button {
     max-width: 600px;
     margin: 0 auto;
 }
-
